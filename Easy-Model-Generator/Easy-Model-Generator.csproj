@@ -50,6 +50,9 @@
     <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -70,6 +73,11 @@
     <Compile Include="Form.Designer.cs">
       <DependentUpon>Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="JsonCreator\Create.cs" />
+    <Compile Include="JsonCreator\BlockMetaDataCreate.cs" />
+    <Compile Include="JsonCreator\BlockNormalCreate.cs" />
+    <Compile Include="JsonCreator\PathLookup.cs" />
+    <Compile Include="JsonCreator\Validator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form.resx">
@@ -83,7 +91,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +103,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\metablock_blockmodel.json" />
+    <None Include="Resources\metablock_blockstate.json" />
+    <None Include="Resources\metablock_blockstate_include.json" />
+    <None Include="Resources\metablock_itemmodel.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -111,6 +125,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\baseblock_blockmodel.json" />
+    <None Include="Resources\baseblock_blockstate.json" />
+    <None Include="Resources\baseblock_itemmodel.json" />
+    <None Include="Resources\logo.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

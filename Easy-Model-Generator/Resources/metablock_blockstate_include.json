@@ -1,0 +1,3 @@
+"meta=${variant}": {
+	"model": "${modid}:${name}/${variant}"
+}
