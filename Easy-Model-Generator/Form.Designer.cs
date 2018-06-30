@@ -32,8 +32,8 @@
             this.CreateButton = new System.Windows.Forms.Button();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.ModelMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.NormalEntry = new System.Windows.Forms.ToolStripMenuItem();
-            this.MetadataEntry = new System.Windows.Forms.ToolStripMenuItem();
+            this.BlockNormalEntry = new System.Windows.Forms.ToolStripMenuItem();
+            this.BlockMetadataEntry = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusLabel = new System.Windows.Forms.Label();
             this.StatusStaticTextLabel = new System.Windows.Forms.Label();
             this.NameTextBox = new System.Windows.Forms.TextBox();
@@ -44,6 +44,8 @@
             this.LogoPicture = new System.Windows.Forms.PictureBox();
             this.VariantsTextBox = new System.Windows.Forms.RichTextBox();
             this.VariantsStaticTextLabel = new System.Windows.Forms.Label();
+            this.ItemNormalEntry = new System.Windows.Forms.ToolStripMenuItem();
+            this.ItemMetadataEntry = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicture)).BeginInit();
             this.SuspendLayout();
@@ -71,25 +73,27 @@
             // ModelMenu
             // 
             this.ModelMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.NormalEntry,
-            this.MetadataEntry});
+            this.BlockNormalEntry,
+            this.BlockMetadataEntry,
+            this.ItemNormalEntry,
+            this.ItemMetadataEntry});
             this.ModelMenu.Name = "ModelMenu";
             this.ModelMenu.Size = new System.Drawing.Size(58, 20);
             this.ModelMenu.Text = "Models";
             // 
-            // NormalEntry
+            // BlockNormalEntry
             // 
-            this.NormalEntry.Name = "NormalEntry";
-            this.NormalEntry.Size = new System.Drawing.Size(156, 22);
-            this.NormalEntry.Text = "Block Normal";
-            this.NormalEntry.Click += new System.EventHandler(this.NormalEntry_Click);
+            this.BlockNormalEntry.Name = "BlockNormalEntry";
+            this.BlockNormalEntry.Size = new System.Drawing.Size(180, 22);
+            this.BlockNormalEntry.Text = "Block Normal";
+            this.BlockNormalEntry.Click += new System.EventHandler(this.BlockNormalEntry_Click);
             // 
-            // MetadataEntry
+            // BlockMetadataEntry
             // 
-            this.MetadataEntry.Name = "MetadataEntry";
-            this.MetadataEntry.Size = new System.Drawing.Size(156, 22);
-            this.MetadataEntry.Text = "Block Metadata";
-            this.MetadataEntry.Click += new System.EventHandler(this.MetadataEntry_Click);
+            this.BlockMetadataEntry.Name = "BlockMetadataEntry";
+            this.BlockMetadataEntry.Size = new System.Drawing.Size(180, 22);
+            this.BlockMetadataEntry.Text = "Block Metadata";
+            this.BlockMetadataEntry.Click += new System.EventHandler(this.BlockMetadataEntry_Click);
             // 
             // StatusLabel
             // 
@@ -179,6 +183,20 @@
             this.VariantsStaticTextLabel.TabIndex = 11;
             this.VariantsStaticTextLabel.Text = "Variants :";
             // 
+            // ItemNormalEntry
+            // 
+            this.ItemNormalEntry.Name = "ItemNormalEntry";
+            this.ItemNormalEntry.Size = new System.Drawing.Size(180, 22);
+            this.ItemNormalEntry.Text = "Item Normal";
+            this.ItemNormalEntry.Click += new System.EventHandler(this.ItemNormalEntry_Click);
+            // 
+            // ItemMetadataEntry
+            // 
+            this.ItemMetadataEntry.Name = "ItemMetadataEntry";
+            this.ItemMetadataEntry.Size = new System.Drawing.Size(180, 22);
+            this.ItemMetadataEntry.Text = "Item Metdata";
+            this.ItemMetadataEntry.Click += new System.EventHandler(this.ItemMetadataEntry_Click);
+            // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,8 +233,8 @@
         private System.Windows.Forms.Button CreateButton;
         private System.Windows.Forms.MenuStrip MainMenu;
         private System.Windows.Forms.ToolStripMenuItem ModelMenu;
-        private System.Windows.Forms.ToolStripMenuItem NormalEntry;
-        private System.Windows.Forms.ToolStripMenuItem MetadataEntry;
+        private System.Windows.Forms.ToolStripMenuItem BlockNormalEntry;
+        private System.Windows.Forms.ToolStripMenuItem BlockMetadataEntry;
         private System.Windows.Forms.Label StatusLabel;
         private System.Windows.Forms.Label StatusStaticTextLabel;
         private System.Windows.Forms.TextBox NameTextBox;
@@ -227,6 +245,8 @@
         private System.Windows.Forms.TextBox ModidTextBox;
         private System.Windows.Forms.RichTextBox VariantsTextBox;
         private System.Windows.Forms.Label VariantsStaticTextLabel;
+        private System.Windows.Forms.ToolStripMenuItem ItemNormalEntry;
+        private System.Windows.Forms.ToolStripMenuItem ItemMetadataEntry;
     }
 }
 

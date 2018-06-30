@@ -17,15 +17,28 @@ namespace Easy_Model_Generator
             InitializeComponent();
         }
 
-        private void NormalEntry_Click(object sender, EventArgs e)
+        private void BlockNormalEntry_Click(object sender, EventArgs e)
         {
             StatusLabel.Text = "Block Normal";
             setVariants(false);
         }
 
-        private void MetadataEntry_Click(object sender, EventArgs e)
+        private void BlockMetadataEntry_Click(object sender, EventArgs e)
         {
             StatusLabel.Text = "Block Metadata";
+            setVariants(true);
+        }
+
+
+        private void ItemNormalEntry_Click(object sender, EventArgs e)
+        {
+            StatusLabel.Text = "Item Normal";
+            setVariants(false);
+        }
+
+        private void ItemMetadataEntry_Click(object sender, EventArgs e)
+        {
+            StatusLabel.Text = "Item Metadata";
             setVariants(true);
         }
 
@@ -46,18 +59,41 @@ namespace Easy_Model_Generator
             {
                 new JsonCreator.BlockNormalCreate(ModidTextBox.Text, NameTextBox.Text);
             }
-            else if (StatusLabel.Text == "Block Metadata") {
+            else if (StatusLabel.Text == "Block Metadata")
+            {
 
                 List<string> list = new List<string>();
 
-                foreach (string value in VariantsTextBox.Lines) {
-                    if (String.IsNullOrWhiteSpace(value)) {
+                foreach (string value in VariantsTextBox.Lines)
+                {
+                    if (String.IsNullOrWhiteSpace(value))
+                    {
                         continue;
                     }
                     list.Add(value);
                 }
-            
+
                 new JsonCreator.BlockMetaDataCreate(ModidTextBox.Text, NameTextBox.Text, list);
+            }
+            else if (StatusLabel.Text == "Item Normal")
+            {
+                new JsonCreator.ItemNormalCreate(ModidTextBox.Text, NameTextBox.Text);
+            }
+            else if (StatusLabel.Text == "Item Metadata")
+            {
+
+                List<string> list = new List<string>();
+
+                foreach (string value in VariantsTextBox.Lines)
+                {
+                    if (String.IsNullOrWhiteSpace(value))
+                    {
+                        continue;
+                    }
+                    list.Add(value);
+                }
+
+                new JsonCreator.ItemMetaDataCreate(ModidTextBox.Text, NameTextBox.Text, list);
             }
             else
             {

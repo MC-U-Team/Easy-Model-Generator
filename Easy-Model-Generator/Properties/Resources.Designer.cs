@@ -91,6 +91,16 @@ namespace Easy_Model_Generator.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
+        /// </summary>
+        internal static byte[] baseitem_itemmodel {
+            get {
+                object obj = ResourceManager.GetObject("baseitem_itemmodel", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap logo {
@@ -136,6 +146,16 @@ namespace Easy_Model_Generator.Properties {
         internal static byte[] metablock_itemmodel {
             get {
                 object obj = ResourceManager.GetObject("metablock_itemmodel", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
+        /// </summary>
+        internal static byte[] metaitem_itemmodel {
+            get {
+                object obj = ResourceManager.GetObject("metaitem_itemmodel", resourceCulture);
                 return ((byte[])(obj));
             }
         }

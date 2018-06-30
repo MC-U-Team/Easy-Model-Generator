@@ -73,6 +73,8 @@
     <Compile Include="JsonCreator\Create.cs" />
     <Compile Include="JsonCreator\BlockMetaDataCreate.cs" />
     <Compile Include="JsonCreator\BlockNormalCreate.cs" />
+    <Compile Include="JsonCreator\ItemMetaDataCreate.cs" />
+    <Compile Include="JsonCreator\ItemNormalCreate.cs" />
     <Compile Include="JsonCreator\PathLookup.cs" />
     <Compile Include="JsonCreator\Validator.cs" />
     <Compile Include="Program.cs" />
@@ -99,10 +101,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\baseitem_itemmodel.json" />
     <None Include="Resources\metablock_blockmodel.json" />
     <None Include="Resources\metablock_blockstate.json" />
     <None Include="Resources\metablock_blockstate_include.json" />
     <None Include="Resources\metablock_itemmodel.json" />
+    <None Include="Resources\metaitem_itemmodel.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
